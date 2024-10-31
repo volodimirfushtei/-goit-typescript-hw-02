@@ -39,20 +39,20 @@
 }
 .modal_description {
   font-size: var(--font-size-small);
-  color: #b1b0b6;
+  color: #f62408;
   margin-top: 5px;
   transition: color 0.3s ease;
   text-align: center;
 }
 .ImageCard_author {
   font-size: var(--font-size-small);
-  color: #b1b0b6;
+  color: #f81e05;
   margin-top: 5px;
   transition: color 0.3s ease;
 }
 .modal_likes {
   font-size: var(--font-size-small);
-  color: #b1b0b6;
+  color: #f10e0e;
   margin-top: 5px;
   transition: color 0.3s ease;
 }
