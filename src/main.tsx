@@ -1,8 +1,8 @@
-import React from "react"; // Make sure to import React
+import React from "react";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./components/App/App"; // Import your App component
+import App from "./components/App/App";
 
 const root = createRoot(document.getElementById("root") as HTMLElement);
 root.render(

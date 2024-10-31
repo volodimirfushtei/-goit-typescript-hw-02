@@ -6,7 +6,7 @@ import LoadMoreBtn from "../LoadMoreBtn/LoadMoreBtn";
 import ImageGallery from "../ImageGallery/ImageGallery";
 import Loader from "../Loader/Loader";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
-import { fetchImages } from "../../servises/api"; // Переконайтеся, що шлях правильний
+import { fetchImages } from "../../servises/api";
 import ImageModal from "../ImageModal/ImageModal";
 import { Image } from "./App.types";
 
@@ -35,7 +35,9 @@ function App() {
   useEffect(() => {
     const getData = async () => {
       if (!query) return;
-
+      if (isLoadingMore === false) {
+        setIsLoadingMore(true);
+      }
       setLoading(true);
       setError(null);
       try {
