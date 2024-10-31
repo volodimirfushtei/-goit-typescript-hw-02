@@ -25,6 +25,7 @@
 }
 .ImageModal {
   background-color: rgba(60, 54, 54, 0.5);
+  transition: background-color 0.3s ease;
 }
 .Items {
   display: flex;

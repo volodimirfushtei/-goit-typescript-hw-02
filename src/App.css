@@ -4,3 +4,10 @@
   padding: 2rem;
   text-align: center;
 }
+body {
+  background-image: url("../src/assets/pexels1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-color 0.3s ease;
+}

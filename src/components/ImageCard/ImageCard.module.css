@@ -1,6 +1,9 @@
 .image {
-  width: 420px;
-  height: 300px;
+  width: 410px;
+  height: 320px;
+  border: 2px solid#d7d5d5;
+  transition: border-color 0.3s ease;
+  border-radius: 5px;
 }
 .imageCard_container {
   margin: 10px;
@@ -14,14 +17,14 @@
 }
 .ImageCard_description {
   margin-top: 5px;
-  color: #f38d93;
+  color: #f4edee;
   font-size: var(--font-size-small);
   line-height: 1.5;
   text-align: center;
   transition: color 0.3s ease;
   cursor: pointer;
   &:hover {
-    color: #f8f3f3;
+    color: #e3e0e0;
   }
   &:active {
     color: #e4cdcf;
@@ -36,14 +39,14 @@
 }
 .ImageCard_author {
   margin-top: 5px;
-  color: #ef8c9b;
+  color: #f6f4f4;
   font-size: var(--font-size-small);
   line-height: 1.5;
   text-align: center;
   transition: color 0.3s ease;
   cursor: pointer;
   &:hover {
-    color: #f3ecec;
+    color: #d7d5d5;
   }
   &:active {
     color: #ef4e5b;
