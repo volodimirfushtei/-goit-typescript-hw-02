@@ -2,14 +2,14 @@
   position: absolute;
   top: 0;
   right: 0;
-  color: #f8f5f5;
+  color: #f44c4c;
   background-color: transparent;
   border: none;
   font-size: 24px;
   cursor: pointer;
   transition: color 0.3s ease;
   &:hover {
-    color: #b1b0b6;
+    color: #f50606;
     transition: color 0.3s ease;
     transition: fill-opacity 0.3s ease;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
