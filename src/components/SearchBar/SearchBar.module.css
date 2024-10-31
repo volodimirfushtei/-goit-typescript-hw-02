@@ -1,0 +1,83 @@
+.header {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 375px) {
+  .header {
+    background-color: lightblue;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}
+
+.searchBar_container {
+  width: 1200px;
+  font: 1em sans-serif;
+
+  padding: 5px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  background-color: rgb(75, 75, 237);
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  width: 600px;
+}
+
+.searchBar_container:hover {
+  background-color: #1f1cf6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.button {
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: #f4dc64;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font: 1em sans-serif;
+
+  &:hover {
+    background-color: #f6cf0c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.searchBar_input {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  font-size: 1em;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  &:focus {
+    background-color: #5d5b5b;
+  }
+
+  &:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+}
