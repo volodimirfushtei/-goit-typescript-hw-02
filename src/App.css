@@ -11,3 +11,15 @@ body {
   background-repeat: no-repeat;
   transition: background-color 0.3s ease;
 }
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(9, 9, 9, 0.6);
+  opacity: 0.6;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}

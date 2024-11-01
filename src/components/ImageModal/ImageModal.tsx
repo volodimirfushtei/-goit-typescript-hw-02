@@ -1,24 +1,8 @@
 import Modal from "react-modal";
 import s from "./ImageModal.module.css";
 import { IoCloseCircleOutline } from "react-icons/io5";
-
-interface Image {
-  urls: {
-    regular: string;
-  };
-  alt_description?: string;
-  user?: {
-    name: string;
-  };
-  likes?: number;
-  created_at?: string;
-}
-
-interface ImageModalProps {
-  modalIsOpen: boolean;
-  closeModal: () => void;
-  image: Image | null;
-}
+import { ImageModal as ImageModalType } from "../App/App.types";
+import { ImageModalProps } from "../App/App.types";
 
 const customStyles = {
   content: {

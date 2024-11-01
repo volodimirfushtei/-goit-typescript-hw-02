@@ -1,24 +1,21 @@
 import s from "./LoadMoreBtn.module.css";
 import Loader from "../Loader/Loader";
 import toast, { Toaster } from "react-hot-toast";
+import { LoadMoreBtnProps } from "../App/App.types";
 
-interface LoadMoreBtnProps {
-  haveImages: number;
-  isLoadingMore: boolean;
-  onClick: () => void;
-}
 
 const LoadMoreBtn: React.FC<LoadMoreBtnProps> = ({
   haveImages,
   isLoadingMore,
   onClick,
 }) => {
-  if (haveImages <= 0) {
-    if (haveImages === 0) {
-      toast.error("No more images to load", { duration: 3000 });
+  const handleLoadMore = () => {
+    if (haveImages <= 0) {
+      toast.error("No more images");
+      return;
     }
-    return null;
-  }
+    onClick();
+  };
 
   return (
     <div className={s.container_button_loadmore}>
@@ -28,8 +25,9 @@ const LoadMoreBtn: React.FC<LoadMoreBtnProps> = ({
         <button
           className={s.button_loadmore}
           type="button"
-          onClick={onClick}
+          onClick={handleLoadMore}
           disabled={isLoadingMore}
+          aria-label="Load more images"
         >
           Load more
         </button>

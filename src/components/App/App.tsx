@@ -35,10 +35,9 @@ function App() {
   useEffect(() => {
     const getData = async () => {
       if (!query) return;
-      if (isLoadingMore === false) {
-        setIsLoadingMore(true);
-      }
+
       setLoading(true);
+      setIsLoadingMore(page !== 1);
       setError(null);
       try {
         const data = await fetchImages(query, page);
@@ -52,8 +51,10 @@ function App() {
         toast.error("An error occurred while fetching images!");
       } finally {
         setLoading(false);
+        setIsLoadingMore(false);
       }
     };
+
     getData();
   }, [query, page]);
 
@@ -63,19 +64,25 @@ function App() {
     setImages([]);
     setTotalPages(0);
   };
+  const handleLoadMore = () => {
+    if (page < totalPages) {
+      setIsLoadingMore(true);
+      setPage((prev) => prev + 1);
+    }
+  };
 
   return (
     <div className="App">
       <Toaster />
       <SearchBar onSubmit={handleFilterChange} />
-      {loading && <Loader />}
+      {(loading || isLoadingMore) && <Loader />}
       {error && <ErrorMessage />}
       <ImageGallery images={images} openModal={openModal} />
-      {totalPages > page && (
+      {images.length > 0 && page < totalPages && !isLoadingMore && (
         <LoadMoreBtn
-          onClick={() => setPage((prev) => prev + 1)}
+          onClick={handleLoadMore}
           haveImages={totalPhotos}
-          isLoadingMore={false}
+          isLoadingMore={isLoadingMore}
         />
       )}
       {modalIsOpen && (

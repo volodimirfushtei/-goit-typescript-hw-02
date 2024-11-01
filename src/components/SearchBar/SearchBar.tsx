@@ -1,11 +1,7 @@
 import s from "./SearchBar.module.css";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-
-interface SearchBarProps {
-  onSubmit: (query: string) => void;
-  placeholder?: string;
-}
+import { SearchBarProps } from "../App/App.types";
 
 const SearchBar: React.FC<SearchBarProps> = ({
   onSubmit,
