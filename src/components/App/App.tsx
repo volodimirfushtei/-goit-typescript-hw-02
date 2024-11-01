@@ -64,34 +64,30 @@ function App() {
     setImages([]);
     setTotalPages(0);
   };
-  const handleLoadMore = () => {
-    if (page < totalPages) {
-      setIsLoadingMore(true);
-      setPage((prev) => prev + 1);
-    }
-  };
 
   return (
     <div className="App">
       <Toaster />
       <SearchBar onSubmit={handleFilterChange} />
-      {(loading || isLoadingMore) && <Loader />}
-      {error && <ErrorMessage />}
-      <ImageGallery images={images} openModal={openModal} />
-      {images.length > 0 && page < totalPages && !isLoadingMore && (
-        <LoadMoreBtn
-          onClick={handleLoadMore}
-          haveImages={totalPhotos}
-          isLoadingMore={isLoadingMore}
-        />
-      )}
-      {modalIsOpen && (
-        <ImageModal
-          modalIsOpen={modalIsOpen}
-          closeModal={closeModal}
-          image={selectedImage}
-        />
-      )}
+      <main>
+        {(loading || isLoadingMore) && <Loader />}
+        {error && <ErrorMessage />}
+        <ImageGallery images={images} openModal={openModal} />
+        {images.length > 0 && page < totalPages && !isLoadingMore && (
+          <LoadMoreBtn
+            onClick={() => setPage((prev) => prev + 1)}
+            haveImages={totalPhotos}
+            isLoadingMore={isLoadingMore}
+          />
+        )}
+        {modalIsOpen && (
+          <ImageModal
+            modalIsOpen={modalIsOpen}
+            closeModal={closeModal}
+            image={selectedImage}
+          />
+        )}
+      </main>
     </div>
   );
 }
