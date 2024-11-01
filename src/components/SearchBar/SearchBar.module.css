@@ -51,14 +51,14 @@
 .button {
   padding: 8px 16px;
   border-radius: 5px;
-  background-color: #f4dc64;
-  color: white;
+  background-color: #f1ca09;
+  color: rgb(7, 7, 7);
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
   font: 1em sans-serif;
 
   &:hover {
-    background-color: #f6cf0c;
+    background-color: #f0c802;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 }

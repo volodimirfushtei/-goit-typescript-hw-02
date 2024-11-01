@@ -1,8 +1,7 @@
 import s from "./ImageGallery.module.css";
 import ImageCard from "../ImageCard/ImageCard";
 import { Image } from "../App/App.types";
-import {ImageGalleryProps} from "../App/App.types"
-
+import { ImageGalleryProps } from "../App/App.types";
 
 const ImageGallery: React.FC<ImageGalleryProps> = ({ images, openModal }) => {
   return (
