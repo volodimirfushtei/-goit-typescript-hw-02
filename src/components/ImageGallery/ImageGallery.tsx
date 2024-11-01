@@ -14,7 +14,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, openModal }) => {
             </li>
           ))
         ) : (
-          <p className={s.ImageGallery_p}>No images found</p>
+          <li className={s.ImageGallery_p}>No images found</li>
         )}
       </ul>
     </div>
