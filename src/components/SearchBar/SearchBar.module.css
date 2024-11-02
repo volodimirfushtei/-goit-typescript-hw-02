@@ -33,53 +33,63 @@
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+@media (min-width: 768px) {
+  .searchBar_container {
+    width: 600px;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-style: italic;
+    font-variant: small-caps;
+  }
 
-.form {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-  width: 600px;
-}
+  .form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    width: 600px;
+  }
 
-.searchBar_container:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
-}
-
-.button {
-  padding: 8px 16px;
-  border-radius: 5px;
-  background-color: #f1ca09;
-  color: rgb(7, 7, 7);
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-  font: 1em sans-serif;
-
-  &:hover {
-    background-color: #f0c802;
+  .searchBar_container:hover {
+    background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-}
-
-.searchBar_input {
-  width: 100%;
-  padding: 5px;
-  border: none;
-  font-size: 1em;
-  outline: none;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: #e8e3e3;
-    color: black;
+    transition: background-color 0.3s ease;
   }
 
-  &:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+  .button {
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: #f6d11a;
+    color: rgb(7, 7, 7);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    font: 1em sans-serif;
+
+    &:hover {
+      background-color: #e2bd03;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      color: antiquewhite;
+    }
+  }
+
+  .searchBar_input {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    font-size: 1em;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #e8e3e3;
+      color: black;
+    }
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
   }
 }
