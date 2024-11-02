@@ -59,7 +59,7 @@
   .button {
     padding: 8px 16px;
     border-radius: 5px;
-    background-color: #f6d11a;
+    background-color: #f1c902;
     color: rgb(7, 7, 7);
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
@@ -90,6 +90,66 @@
     &:disabled {
       background-color: #ccc;
       cursor: not-allowed;
+    }
+  }
+}
+@media (min-width: 375px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  .searchBar_container {
+    width: 340px;
+
+    font-size: 0.9em;
+    font-weight: bold;
+    font-style: italic;
+    font-variant: small-caps;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .button {
+      padding: 5px 10px;
+      background-color: #f1c902;
+      color: rgb(7, 7, 7);
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+      font: 0.9em sans-serif;
+
+      &:hover {
+        background-color: #e2bd03;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        color: antiquewhite;
+      }
+
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 5px;
+        border: none;
+        font-size: 0.9em;
+        outline: none;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+        &:hover {
+          background-color: #e8e3e3;
+          color: black;
+        }
+
+        &:disabled {
+          background-color: #ccc;
+          cursor: not-allowed;
+        }
+      }
     }
   }
 }
